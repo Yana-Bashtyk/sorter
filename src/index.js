@@ -24,8 +24,8 @@ class Sorter {
     
     for (var i=0; i < indices.length; i++){
       arrNew.push(this.instanceSorter[indices[i]]);
-      
     }
+
     if(!this.compareFunction){
       arrNew.sort(function (a, b) {
       return a - b;
@@ -41,6 +41,7 @@ class Sorter {
     for (var k=0; k < indices.length; k++) {
       this.instanceSorter.splice(indices[k], 1, arrNew[k]);
     }
+    
     return this.instanceSorter;
   }
 
